@@ -7,7 +7,8 @@ public class EdiTresUm {
     
     public static void main(String[] args) {
         Pilha p =  new Pilha();
-	p.invertePalavras("Macaco quer comer banana");
+	String fraseInvertida = p.invertePalavras("Macaco quer comer banana");
+	System.out.Println(fraseInvertida);
         
     }
 }
