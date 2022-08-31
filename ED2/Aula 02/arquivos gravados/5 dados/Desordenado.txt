@@ -1,0 +1,4 @@
+Nome do Aluno: Vitor Allace Marques Costa
+Vetor Invertido para Testar o Pior Caso:
+
+[16190, 5371, 3945, 3724, -13805]

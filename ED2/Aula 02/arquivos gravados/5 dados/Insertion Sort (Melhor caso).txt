@@ -1,0 +1,7 @@
+Nome do Aluno: Vitor Allace Marques Costa
+Nome do algoritmo: Insertion Sort
+Tempo de execução: 0:0:0:0
+Quantidade de Comparações: 4
+Quantidade de Movimentos: 4
+
+[-13805, 3724, 3945, 5371, 16190]

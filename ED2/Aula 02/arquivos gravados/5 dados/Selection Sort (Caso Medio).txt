@@ -1,0 +1,7 @@
+Nome do Aluno: Vitor Allace Marques Costa
+Nome do algoritmo: Selection Sort
+Tempo de execução: 0:0:0:0
+Quantidade de Comparações: 15
+Quantidade de Movimentos: 5
+
+[-13805, 3724, 3945, 5371, 16190]
