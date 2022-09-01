@@ -7,7 +7,7 @@ public class Aula002 {
     public static void main(String[] args) {
         Arquivo arq = new Arquivo();
 
-        int[] vetor1 = arq.lerArquivo("C:/Users/vitor/Desktop/Vitor/4 Periodo/ED2/ArquivosTeste/dados100_mil.txt");
+        int[] vetor1 = arq.lerArquivo("C:/Users/vitor/Desktop/Vitor/4 Periodo/ED2/ArquivosTeste/dados500_mil.txt");
         int[] vetor2 = vetor1;
 
         System.out.println("Iniciando...\n");
@@ -45,9 +45,12 @@ public class Aula002 {
             comp++;
             while(j>=0 && vetor[j] > chave){
                 vetor[j+1] = vetor[j];
+                mov++;
                 j--;
+                comp++;
             }
             vetor[j+1] = chave;
+            mov++;
         }
 
         long tempoFinal = System.currentTimeMillis();
@@ -84,7 +87,7 @@ public class Aula002 {
             int x = vetor[i];
             vetor[i] = vetor[indiceMenor];
             vetor[indiceMenor] = x;
-            mov++;
+            mov+=2;
         }
 
         long tempoFinal = System.currentTimeMillis();
