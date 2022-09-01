@@ -84,12 +84,17 @@ public class Arquivo {
     public void gravarArquivo(String url, int[] conteudo, String nomeAlg, long tempoExe, long qtdComp, long qtdMov){
         Path caminho = Paths.get(url);
 
-        int segundos = (int) (tempoExe / 1000) % 60;
-        int minutos = segundos / 60;
-        int horas = minutos / 60;
+        //long timerIni = System.currentTimeMillis();
+        
+        int miliSeg = (int) (tempoExe % 1000);
+        int seg = (int)( tempoExe / 1000) % 60;     
+        int min = (int)( tempoExe / 1000) / 60;    
+        int hr = (int) ( tempoExe / 3600000);
+        
+        String tempo = String.format( "%02d:%02d:%02d:%03d", hr, min, seg, miliSeg);
 
 
-        String cabecalho = "Nome do Aluno: Vitor Allace Marques Costa" + "\nNome do algoritmo: " + nomeAlg + "\nTempo de execução: " + horas + ":" + minutos + ":" + segundos + ":" + (tempoExe%1000) + "\nQuantidade de Comparações: " + qtdComp + "\nQuantidade de Movimentos: " + qtdMov + "\n\n";
+        String cabecalho = "Nome do Aluno: Vitor Allace Marques Costa" + "\nNome do algoritmo: " + nomeAlg + "\nTempo de execução: "+ tempo + "\nQuantidade de Comparações: " + qtdComp + "\nQuantidade de Movimentos: " + qtdMov + "\n\n";
 
         
         String vetor = cabecalho + "[";
@@ -111,5 +116,15 @@ public class Arquivo {
         } catch(Exception e){
             System.out.println("Erro!!");
         }
+        // long timerFim = System.currentTimeMillis();
+
+        // long timerDif = (timerFim - timerIni) + tempoExe;
+
+        // int timerMilis = (int) (timerDif % 1000);
+        // int timerSeg = (int) (timerDif / 1000) % 60;
+        // int timerMin = (int) (timerDif / 1000) / 60;
+
+        // System.out.printf("\n\nO TEMPO AO TODO FOI: %02d:%02d:%03d ", timerMin, timerSeg, timerMilis);
+
     }
 }
