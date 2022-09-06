@@ -1,0 +1,7 @@
+Nome do Aluno: Vitor Allace Marques Costa
+Nome do algoritmo: Bubble Sort
+Tempo de execução: 00:00:00:004
+Quantidade de Comparações: 269
+Quantidade de Movimentos: 730
+
+[-13805, 3724, 3945, 5371, 16190]
