@@ -50,16 +50,7 @@ public class Arquivo {
 
         String cabecalho = "Nome do Aluno: Vitor Allace Marques Costa\nVetor Invertido para Testar o Pior Caso:\n\n";
 
-        String vetor = cabecalho + "[";
-
-        for(int i=0; i<conteudo.length; i++){
-            vetor += conteudo[i];
-
-            if(i == conteudo.length-1) vetor += "]";
-            else{
-                vetor += ", ";
-            }
-        }
+        String vetor = cabecalho + Arrays.toString(conteudo);
 
         byte[] textoEmBytes = vetor.getBytes(); 
 
@@ -85,8 +76,6 @@ public class Arquivo {
     public void gravarArquivo(String url, int[] conteudo, String nomeAlg, long tempoExe, long qtdComp, long qtdMov){
         Path caminho = Paths.get(url);
 
-        //long timerIni = System.currentTimeMillis();
-        
         int miliSeg = (int) (tempoExe % 1000);
         int seg = (int)( tempoExe / 1000) % 60;     
         int min = (int)( tempoExe / 1000) / 60;    
@@ -98,18 +87,7 @@ public class Arquivo {
         String cabecalho = "Nome do Aluno: Vitor Allace Marques Costa" + "\nNome do algoritmo: " + nomeAlg + "\nTempo de execução: "+ tempo + "\nQuantidade de Comparações: " + qtdComp + "\nQuantidade de Movimentos: " + qtdMov + "\n\n";
 
         
-        String vetor = cabecalho;
-
-
-        // for(int i=0; i<conteudo.length; i++){
-        //     vetor += conteudo[i];
-
-        //     if(i == conteudo.length-1) vetor += "]";
-        //     else{
-        //         vetor += ", ";
-        //     }
-        // }
-        vetor += Arrays.toString(conteudo);
+        String vetor = cabecalho + Arrays.toString(conteudo);
 
         byte[] textoEmBytes = vetor.getBytes(); 
 
@@ -118,15 +96,7 @@ public class Arquivo {
         } catch(Exception e){
             System.out.println("Erro!!");
         }
-        // long timerFim = System.currentTimeMillis();
-
-        // long timerDif = (timerFim - timerIni) + tempoExe;
-
-        // int timerMilis = (int) (timerDif % 1000);
-        // int timerSeg = (int) (timerDif / 1000) % 60;
-        // int timerMin = (int) (timerDif / 1000) / 60;
-
-        // System.out.printf("\n\nO TEMPO AO TODO FOI: %02d:%02d:%03d ", timerMin, timerSeg, timerMilis);
 
     }
+
 }
