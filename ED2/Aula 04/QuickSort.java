@@ -12,7 +12,7 @@ public class QuickSort {
 
         long inicio = System.currentTimeMillis();
 
-        ordenacao(vetor, 0, (vetor.length-1));
+        ordenacao(vetor, 0, vetor.length-1);
 
         long fim = System.currentTimeMillis();
 
@@ -24,16 +24,24 @@ public class QuickSort {
 
     }
 
-    private void ordenacao(int[] vetor, int comeco, int fim){
+    private void ordenacao(int[] vetor, int lEsquerdo, int lDireito){
         comp++;
-        if (comeco < fim) {
-			int pIndex = particao(vetor, comeco, fim);
-			ordenacao(vetor, comeco, pIndex - 1);
-			ordenacao(vetor, pIndex + 1, fim);
+        if (lEsquerdo < lDireito) {
+			int indicePivot = separacao(vetor, lEsquerdo, lDireito);/*  Pega o pivot, separa todos os elementos 
+                                                                        menores que ele na esquerda e os maiores que ele na direita, após isso ele retorna o índice do pivot    */
+            try{
+                ordenacao(vetor, lEsquerdo, indicePivot);/* ira separar todo o lado esquerdo
+                                                            do pivot em partes menores  */
+
+                ordenacao(vetor, indicePivot + 1, lDireito);/*  ira ordenar todo o lado direito do pivot*/
+            }
+            catch(StackOverflowError so){
+                System.out.print("");
+            }
 		}
     }
 
-    private void troca(int vetor[], int i, int j) {
+    private void troca(int[] vetor, int i, int j) {
 		int aux = vetor[i];
 		vetor[i] = vetor[j];
 		vetor[j] = aux;
@@ -41,19 +49,27 @@ public class QuickSort {
         mov+=2;
 	}
 
-    private int particao(int vetor[], int comeco, int fim) {
-		int pivot = vetor[fim];
-		int pIndex = comeco;
+    private int separacao(int[] vetor, int lEsquerdo, int lDireito) {
+        int meio = (int) (lEsquerdo + lDireito) / 2;
+        int pivot = vetor[meio];
+        int i = lEsquerdo-1;
+        int j = lDireito+1;
 
-		for (int i = comeco; i<fim; i++) {
+        while(true){
+            do {
+                i++;
+                comp++;
+            } while (vetor[i] < pivot);
+            
+            do {
+                j--;
+                comp++;
+            } while (vetor[j] > pivot);
+
             comp++;
-			if (vetor[i] <= pivot) {
-				troca(vetor, i, pIndex);
-				pIndex++;
-			}
-		}
-		troca(vetor, pIndex, fim);
+            if(i >= j) return j;
 
-		return pIndex;
-	}
+            troca(vetor, i, j);
+        }
+    }
 }
