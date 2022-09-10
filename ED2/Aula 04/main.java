@@ -11,7 +11,7 @@ public class App {
     public static Arquivo arq = new Arquivo();
   
     public static void main(String[] args) {
-        int[] vetor1 = arq.lerArquivo("C:/Users/vitor/Desktop/Vitor/4 Periodo/ED2/ArquivosTeste/dados1000.txt");
+        int[] vetor1 = arq.lerArquivo("C:/Users/vitor/Desktop/Vitor/4 Periodo/ED2/ArquivosTeste/dados500_mil.txt");
         int[] vetor2 = vetor1.clone();
 
         System.out.println("Iniciando...");
@@ -23,7 +23,6 @@ public class App {
         System.out.println("Merge Sort (Caso Medio) Pronto!!");
 
         melhorCaso(vetor1);
-
         piorCaso(vetor1);
 
         System.out.println("Programa finalizado!!");
@@ -39,13 +38,12 @@ public class App {
 
     public static void piorCaso(int[] vetor){
         Stack<Integer> pilha = new Stack<>();
-        Arquivo arq = new Arquivo();
 
         for(int numero : vetor) pilha.push(numero);
 
         for(int i=0; i<vetor.length; i++) vetor[i] = pilha.pop();
 
-        arq.gravarArquivo("C:/Users/vitor/Documents/Visual Studio Code/IFGOIANO/ED2/Aula003/arquivos gravados/Desordenado.txt", vetor);
+        arq.gravarArquivo("C:/Users/vitor/Documents/Visual Studio Code/IFGOIANO/ED2/Aula004/arquivos gravados/Desordenado.txt", vetor);
 
         qs = new QuickSort(vetor.clone(), "Quick Sort (Pior caso)");
         System.out.println("Pior Caso Quick Sort Pronto!...");
