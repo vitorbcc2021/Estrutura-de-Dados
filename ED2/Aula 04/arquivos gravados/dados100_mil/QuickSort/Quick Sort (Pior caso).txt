@@ -1,6 +1,6 @@
 Nome do Aluno: Vitor Allace Marques Costa
 Nome do algoritmo: Quick Sort
-Tempo de execução: 00:00:00:010
+Tempo de execução: 00:00:00:009
 Quantidade de Comparações: 2269982
 Quantidade de Movimentos: 275418
 
