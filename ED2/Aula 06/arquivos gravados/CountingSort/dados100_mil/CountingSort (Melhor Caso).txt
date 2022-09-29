@@ -1,6 +1,6 @@
 Nome do Aluno: Vitor Allace Marques Costa
 Nome do algoritmo: Counting Sort
-Tempo de execução: 00:00:00:055
+Tempo de execução: 00:00:00:016
 Quantidade de Comparações: 0
 Quantidade de Movimentos: 100000
 
