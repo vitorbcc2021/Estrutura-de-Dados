@@ -48,11 +48,17 @@ public class TimSort {
             int temp = vetor[i];
             int j = i-1;
 
+            this.comp++;
             while(vetor[j] > temp && j >= comeco){
+                this.comp++;
+
+                this.mov++;
                 vetor[j+1] = vetor[j];
                 j--;
                 if(j < 0) break;
             }
+
+            this.mov++;
             vetor[j+1] = temp;
         }
     }
@@ -64,22 +70,27 @@ public class TimSort {
         int[] esq = new int[alcance1];
         int[] dir = new int[alcance2];
 
-        for(int i=0; i< alcance1; i++){
+        for(int i=0; i<alcance1; i++){
+            this.mov++;
             esq[i] = vetor[comeco + i];
         }
 
         for(int i=0; i< alcance2; i++){
+            this.mov++;
             dir[i] = vetor[meio + 1 + i];
         }
 
-        int i=0, j=0, k=1;
+        int i=0, j=0, k=comeco;
 
         while(i < alcance1 && j < alcance2){
+            this.comp++;
             if(esq[i] <= dir[j]){
+                this.mov++;
                 vetor[k] = esq[i];
                 i++;
             }
             else{
+                this.mov++;
                 vetor[k] = dir[j];
                 j++;
             }
@@ -87,13 +98,17 @@ public class TimSort {
         }
 
         while(i < alcance1) {
+            this.mov++;
             vetor[k] = esq[i];
-            k++; i++;
+            k++;
+            i++;
         }
         
         while(j < alcance2){
+            this.mov++;
             vetor[k] = dir[j];
-            k++; j++;
+            k++;
+            j++;
         }
     }
 
