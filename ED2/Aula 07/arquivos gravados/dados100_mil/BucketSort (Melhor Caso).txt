@@ -1,6 +1,6 @@
 Nome do Aluno: Vitor Allace Marques Costa
 Nome do algoritmo: BucketSort (Melhor Caso)
-Tempo de execução: 00:00:00:016
+Tempo de execução: 00:00:00:008
 Quantidade de Comparações: 0
 Quantidade de Movimentos: 100000
 

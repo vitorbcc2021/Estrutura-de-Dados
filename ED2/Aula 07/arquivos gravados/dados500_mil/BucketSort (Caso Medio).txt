@@ -1,6 +1,6 @@
 Nome do Aluno: Vitor Allace Marques Costa
 Nome do algoritmo: BucketSort (Caso Medio)
-Tempo de execução: 00:00:00:168
+Tempo de execução: 00:00:00:057
 Quantidade de Comparações: 0
 Quantidade de Movimentos: 500000
 

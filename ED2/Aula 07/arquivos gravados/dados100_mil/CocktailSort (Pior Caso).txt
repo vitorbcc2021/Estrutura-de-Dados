@@ -1,6 +1,6 @@
 Nome do Aluno: Vitor Allace Marques Costa
 Nome do algoritmo: CocktailSort (Pior Caso)
-Tempo de execução: 00:00:14:528
+Tempo de execução: 00:00:12:571
 Quantidade de Comparações: 4999950000
 Quantidade de Movimentos: 9999567514
 

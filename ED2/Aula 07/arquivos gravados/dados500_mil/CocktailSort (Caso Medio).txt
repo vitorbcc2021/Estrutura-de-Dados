@@ -1,6 +1,6 @@
 Nome do Aluno: Vitor Allace Marques Costa
 Nome do algoritmo: CocktailSort (Caso Medio)
-Tempo de execução: 00:08:36:668
+Tempo de execução: 00:08:27:665
 Quantidade de Comparações: 93721868784
 Quantidade de Movimentos: 125012916564
 
