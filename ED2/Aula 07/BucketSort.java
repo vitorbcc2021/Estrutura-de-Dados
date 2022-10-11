@@ -1,6 +1,7 @@
 package aula007;
 
-import java.util.Arrays;
+import java.util.Collections;
+import java.util.Vector;
 
 import arquivo.Arquivo;
 
@@ -13,9 +14,11 @@ public class BucketSort {
         this.mov = 0;
         this.comp = 0;
 
+        float[] vetorFloat = convertFloat(vetor);
+
         long tempoIni = System.currentTimeMillis();
 
-        bucketSort(vetor);
+        bucketSort(vetorFloat);
 
         long tempoFim = System.currentTimeMillis();
 
@@ -25,26 +28,43 @@ public class BucketSort {
 
     }
 
-    private void bucketSort(int[]vetor){
-        int maiorValor = Arrays.stream(vetor).max().orElse(Integer.MAX_VALUE);
-        int menorValor = Arrays.stream(vetor).min().orElse(0);
-
-        int[] balde = new int[(maiorValor - menorValor) + 1];
+    private void bucketSort(float[] vetor){
+        @SuppressWarnings("unchecked")
+        Vector<Float>[] bucket = new Vector[vetor.length];
 
         for (int i = 0; i < vetor.length; i++) {
-            balde[vetor[i] - menorValor]++;
+            bucket[i] = new Vector<Float>(); //cada posicao do meu vetor vai receber a instancia de um outro vetor
+        }
+
+        for (int i = 0; i < vetor.length; i++) {
+            float index = vetor[i] * vetor.length;
+            bucket[(int)index].add(vetor[i]);
+        }
+
+        for (Vector<Float> vector : bucket) {
+            Collections.sort(vector);
         }
 
         int index = 0;
-
-        for (int i = 0; i < balde.length; i++) {
-            for (int j = 0; j < balde[i]; j++) {
-                vetor[index++] = i + menorValor;
-                this.mov++;
+        for (int i = 0; i < vetor.length; i++) {
+            for (int j = 0; j < bucket[i].size(); j++) {
+                vetor[index++] = bucket[i].get(j);
             }
         }
 
+    }
 
+    private float[] convertFloat(int[] vetor) {
+        int i = 0;
+
+        float[] aux = new float[vetor.length];
+
+        for (int num : vetor) {
+            aux[i] = (float) num;
+            i++;
+        }
+
+        return aux;
     }
     
 }
