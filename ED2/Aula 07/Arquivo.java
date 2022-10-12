@@ -78,8 +78,8 @@ public class Arquivo {
 
         int miliSeg = (int) (tempoExe % 1000);
         int seg = (int)( tempoExe / 1000) % 60;     
-        int min = (int)( tempoExe / 1000) / 60;    
-        int hr = (int) ( tempoExe / 3600000);
+        int min = (int)( tempoExe / (60 * 1000)) % 60;    
+        int hr = (int) ( tempoExe / (60 * 60 * 1000)); //caso eu queira que as horas sejam limitadas a 24 para poder contar dias, basta eu colocar %60 entre o fecha-parenteses e o ponto-e-virgula
         
         String tempo = String.format( "%02d:%02d:%02d:%03d", hr, min, seg, miliSeg);
 

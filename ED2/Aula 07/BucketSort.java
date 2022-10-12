@@ -59,12 +59,22 @@ public class BucketSort {
             }
         }
 
+        TimVector tv = new TimVector();
+
         for (Vector<Float> vector : bucketPositivos) { // ordena cada um dos vetores do meu balde
-            insertionSort(vector);
+            tv.ordene(vector);
+            this.comp += tv.getComp();
+            this.mov += tv.getMov();
+            tv.setComp(0);
+            tv.setMov(0);
         }
 
         for (Vector<Float> vector : bucketNegativos) {
-            insertionSort(vector);
+            tv.ordene(vector);
+            this.comp += tv.getComp();
+            this.mov += tv.getMov();
+            tv.setComp(0);
+            tv.setMov(0);
         }
 
         int index = 0;
@@ -80,30 +90,6 @@ public class BucketSort {
             }
         }
 
-    }
-
-    private Vector<Float> insertionSort(Vector<Float> vetor) {
-        Float chave;
-        
-        if(vetor.size() == 1) return vetor;
-
-        for(int i=1; i<vetor.size(); i++){
-            chave = vetor.get(i);
-            int j = i - 1;
-
-            this.comp++;
-            while(j>=0 && vetor.get(j) > chave){
-                this.comp++;
-                vetor.set(j+1, vetor.get(j));;
-                this.mov++;
-                j--;
-            }
-
-            vetor.set(j+1, chave);
-            mov++;
-        }
-
-        return vetor;
     }
 
     private float[] convertFloat(int[] vetor) {

@@ -15,18 +15,19 @@ public class App {
 
         System.out.println("Inicializando...\n");
 
-        bs = new BucketSort(vetor.clone(), "BucketSort (Caso Medio)");
-        cs = new CocktailSort(vetor.clone(), "CocktailSort (Caso Medio)");
-        //ts = new TimSort(vetor, "TimSort (Caso Medio)");
+        ts = new TimSort(vetor.clone(), "TimSort (Caso Medio)");
+        //cs = new CocktailSort(vetor.clone(), "CocktailSort (Caso Medio)");
+        bs = new BucketSort(vetor, "BucketSort (Caso Medio)");
         
+
         melhorCaso(vetor);
         piorCaso(vetor);
     }
 
     public static void melhorCaso(int[] vetor){
         bs = new BucketSort(vetor, "BucketSort (Melhor Caso)");
-        cs = new CocktailSort(vetor, "CocktailSort (Melhor Caso)");
-       // ts = new TimSort(vetor, "TimSort (Melhor Caso)");
+        //cs = new CocktailSort(vetor, "CocktailSort (Melhor Caso)");
+        ts = new TimSort(vetor, "TimSort (Melhor Caso)");
     }
 
     public static void piorCaso(int[] vetor){
@@ -40,8 +41,8 @@ public class App {
         Arquivo.gravarArquivo("C:/Users/vitor/Documents/Visual Studio Code/IFGOIANO/ED2/Aula006/arquivos gravados/Desordenado.txt", vetor);
 
         bs = new BucketSort(vetor.clone(), "BucketSort (Pior Caso)");
-        cs = new CocktailSort(vetor.clone(), "CocktailSort (Pior Caso)");
-        //ts = new TimSort(vetor.clone(), "TimSort (Pior Caso)");
+        //cs = new CocktailSort(vetor.clone(), "CocktailSort (Pior Caso)");
+        ts = new TimSort(vetor.clone(), "TimSort (Pior Caso)");
 
         System.out.println("Programa Finalizado!!!");
     }
