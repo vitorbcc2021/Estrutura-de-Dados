@@ -10,6 +10,8 @@ class Aula009ED2
         
         Random rdm = new Random();
         
+        Console.ForegroundColor = ConsoleColor.Cyan;
+
         for(int i = 0; i < 20; i++)
         {
             int num = rdm.Next(0, 100);
@@ -17,6 +19,8 @@ class Aula009ED2
             ArvoreBinaria.insere(arv, num);
         }
         
+        Console.ForegroundColor = ConsoleColor.Green;
+
         Console.WriteLine("\nPre ordem:");
         ArvoreBinaria.preOrdem(arv);
         
@@ -29,26 +33,19 @@ class Aula009ED2
         Console.WriteLine("\nEm nivel:");
         ArvoreBinaria.emNivel(arv);
         Console.WriteLine("\n");
+
+        Console.ForegroundColor = ConsoleColor.White;
         
 //##############################    Retirando elementos!  ############################################
         
         for(int i=0; i<5; i++)
         {
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Retirando: " + arv.getElemento());
             arv = ArvoreBinaria.retira(arv, arv.getElemento());
         }
         
-        Console.WriteLine("\n");
-        
-        
-//#############################    Inserindo novos elementos!  ######################################
-
-        for (int i = 0; i < 5; i++)
-        {
-            int num = rdm.Next(0, 100);
-            Console.WriteLine("Inserindo: " + num);
-            arv = ArvoreBinaria.insere(arv, num);
-        }
+        Console.ForegroundColor = ConsoleColor.Green;
         
         Console.WriteLine("\nPre ordem:");
         ArvoreBinaria.preOrdem(arv);
@@ -62,7 +59,8 @@ class Aula009ED2
         Console.WriteLine("\nEm nivel:");
         ArvoreBinaria.emNivel(arv);
         Console.WriteLine("\n");
-        
+
+        Console.ForegroundColor = ConsoleColor.White;
     }
 }
 }
