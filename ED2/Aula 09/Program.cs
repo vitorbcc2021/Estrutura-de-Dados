@@ -42,13 +42,12 @@ class Aula009ED2
         
         
 //#############################    Inserindo novos elementos!  ######################################
-        if(arv == null) arv = new ArvoreBinaria();
 
         for (int i = 0; i < 20; i++)
         {
             int num = rdm.Next(0, 100);
             Console.WriteLine("Inserindo: " + num);
-            ArvoreBinaria.insere(arv, num);
+            arv = ArvoreBinaria.insere(arv, num);
         }
         
         Console.WriteLine("\nPre ordem:");

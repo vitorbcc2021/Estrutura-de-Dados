@@ -99,10 +99,7 @@ class ArvoreBinaria
         if(arvore == null)
         {
             arvore = new ArvoreBinaria();
-            arvore.setElemento(valor);
-            arvore.setDireita(null);
-            arvore.setEsquerda(null);
-            arvore.setSemRaiz(false);
+            insereRaiz(arvore, valor);
         }
         else if(arvore.isSemRaiz())
         {

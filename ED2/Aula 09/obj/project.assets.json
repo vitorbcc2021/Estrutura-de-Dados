@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vitor\\Documents\\Visual Studio Code\\Testes\\C#\\ED2Aula009\\ED2Aula009.csproj",
+      "projectUniqueName": "C:\\Users\\vitor\\Documents\\Visual Studio Code\\IFGOIANO\\ED2\\Aula009\\ED2Aula009.csproj",
       "projectName": "ED2Aula009",
-      "projectPath": "C:\\Users\\vitor\\Documents\\Visual Studio Code\\Testes\\C#\\ED2Aula009\\ED2Aula009.csproj",
+      "projectPath": "C:\\Users\\vitor\\Documents\\Visual Studio Code\\IFGOIANO\\ED2\\Aula009\\ED2Aula009.csproj",
       "packagesPath": "C:\\Users\\vitor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vitor\\Documents\\Visual Studio Code\\Testes\\C#\\ED2Aula009\\obj\\",
+      "outputPath": "C:\\Users\\vitor\\Documents\\Visual Studio Code\\IFGOIANO\\ED2\\Aula009\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\vitor\\AppData\\Roaming\\NuGet\\NuGet.Config"
