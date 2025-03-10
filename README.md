@@ -1,5 +1,5 @@
 # Olá, mundo!
-Este repositório é dedicado ao desenvolvimento do conteúdo das disciplinas de ``Estruturas de Dados I e II``, ministradas pelo professor Fernando Matos no Curso de Bacharelado em Ciência da Computação do IFGOIANO - Campus Morrinhos.
+Este repositório é dedicado ao desenvolvimento do conteúdo das disciplinas de **Estruturas de Dados I e II**, ministradas pelo professor Fernando Matos no Curso de Bacharelado em Ciência da Computação do IFGOIANO - Campus Morrinhos.  
 
 ## O que foi estudado?
 ### Estrutura de Dados I
