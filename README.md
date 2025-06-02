@@ -1,5 +1,8 @@
 # Olá, mundo!
+<img alt="Hanoi Tower Game" width="300px" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.ime.usp.br%2Flem%2Fens-mat%2Fhanoi.gif&f=1&nofb=1&ipt=56c324b30b8290e000be97bde1c6d8558fc3cbd5231c6ecb6fa951b38361acac">
+
 Este repositório é dedicado ao desenvolvimento do conteúdo das disciplinas de **Estruturas de Dados I e II**, ministradas pelo professor Fernando Matos no Curso de Bacharelado em Ciência da Computação do IFGOIANO - Campus Morrinhos.  
+
 
 ## O que foi estudado?
 ### Estrutura de Dados I
